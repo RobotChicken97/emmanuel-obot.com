@@ -3,25 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>try{if(localStorage.getItem('eo-mode')==='light')document.documentElement.setAttribute('data-mode','light')}catch(e){}</script>
 <title>Emmanuel Obot · Software engineer in Manchester</title>
-<meta name="description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. I also look after the systems at Amela Pharmacy, and I’m building PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
+<meta name="description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy and built PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
 <link rel="canonical" href="https://emmanuel-obot.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Emmanuel Obot">
 <meta property="og:title" content="Emmanuel Obot · Software engineer in Manchester">
-<meta property="og:description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. I also look after the systems at Amela Pharmacy, and I’m building PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
+<meta property="og:description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy and built PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
 <meta property="og:url" content="https://emmanuel-obot.com/">
 <meta property="og:image" content="https://emmanuel-obot.com/assets/og.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#14261B">
+<meta name="theme-color" content="#0E1912">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>*{box-sizing:border-box}html{background:#14261B;scroll-padding-top:12px}body{margin:0;background:#F3F6F0}[hidden]{display:none!important}:focus-visible{outline:2px solid #2E4A2C;outline-offset:3px}.nav :focus-visible,.hero :focus-visible,.ph :focus-visible,.foot :focus-visible,.art :focus-visible{outline-color:#F0CFD8}.skip{position:absolute;left:12px;top:-60px;z-index:9;background:#fff;color:#14261B;padding:10px 14px;border-radius:10px;font:600 15px/1 "Bricolage Grotesque",system-ui,sans-serif}.skip:focus{top:12px}.site{min-height:100vh;display:flex;flex-direction:column}.site>main{flex:1}
-/* ---------- The site (one deliberate light world, same in both themes) ---------- */
-.site{--forest:#14261B;--leaf:#2E4A2C;--mint:#F3F6F0;--muted:#5C6B60;--rule:#DCE3D9;--blush:#F0CFD8;--white:#FFFFFF;
-  container-type:inline-size;overflow:hidden;background:var(--mint);color:var(--forest);font:400 16px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+<style>*{box-sizing:border-box}html{background:#09110C;scroll-padding-top:12px}body{margin:0;background:#0E1912;color-scheme:dark}[hidden]{display:none!important}:focus-visible{outline:2px solid #B9D3B0;outline-offset:3px}.nav :focus-visible,.hero :focus-visible,.ph :focus-visible,.foot :focus-visible,.art :focus-visible{outline-color:#F0CFD8}.skip{position:absolute;left:12px;top:-60px;z-index:9;background:#fff;color:#14261B;padding:10px 14px;border-radius:10px;font:600 15px/1 "Bricolage Grotesque",system-ui,sans-serif}.skip:focus{top:12px}.site{min-height:100vh;display:flex;flex-direction:column}.site>main{flex:1}html[data-mode=light]{background:#14261B}html[data-mode=light] body{background:#F3F6F0;color-scheme:light}html[data-mode=light] :focus-visible{outline-color:#2E4A2C}
+/* ---------- The site: dark by default, light when the visitor picks it (data-mode on <html>) ---------- */
+.site{--ground:#0E1912;--panel:#15241A;--forest:#14261B;--deep:#09110C;--ink:#E9EFE6;--leaf:#B9D3B0;--mint:#F3F6F0;--muted:#A2B3A6;--rule:#2A3F31;--blush:#F0CFD8;--white:#FFFFFF;
+  --edge:inset 0 0 0 1px var(--rule);--edge-hi:inset 0 0 0 1px rgba(185,211,176,.35);--line-edge:rgba(233,239,230,.45);--art-edge:var(--rule);--sh:rgba(0,0,0,.6);--sh-hi:rgba(0,0,0,.7);
+  color-scheme:dark;container-type:inline-size;overflow:hidden;background:var(--ground);color:var(--ink);font:400 16px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+:root[data-mode="light"] .site{--ground:#F3F6F0;--panel:#FFFFFF;--deep:#14261B;--ink:#14261B;--leaf:#2E4A2C;--muted:#5C6B60;--rule:#DCE3D9;color-scheme:light;
+  --edge:0 1px 0 var(--rule);--edge-hi:0 1px 0 var(--rule);--line-edge:var(--forest);--art-edge:transparent;--sh:rgba(20,38,27,.35);--sh-hi:rgba(20,38,27,.45)}
+/* Logos: each has a light-mode file and a dark-mode file; only the one for the current mode shows */
+.site .lm{display:none}:root[data-mode="light"] .site .lm{display:block}:root[data-mode="light"] .site .dm{display:none}
+/* Light/dark switch in the nav (it sits on the dark header in both modes) */
+.mode{display:inline-grid;place-items:center;width:36px;height:36px;margin:-8px 0;border:0;border-radius:10px;background:transparent;color:rgba(255,255,255,.85);cursor:pointer;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.mode:hover{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+/* The icon shows the mode a click switches to: a sun in dark mode, a moon in light mode */
+.mode svg{width:18px;height:18px;display:block}.mode .moon{display:none}:root[data-mode="light"] .mode .moon{display:block}:root[data-mode="light"] .mode .sun{display:none}
 .site a{text-decoration:none;color:inherit}
 .site .w{max-width:1200px;margin:0 auto;padding-inline:clamp(20px,5cqi,72px)}
 .site img{display:block;max-width:100%;height:auto}
@@ -31,12 +42,12 @@
 .nav{position:relative;z-index:3}
 .nav .w{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px}
 .logo{font:600 18px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;color:#fff}
-.nl{display:flex;gap:clamp(14px,3cqi,30px);font-size:15px}
+.nl{display:flex;align-items:center;gap:clamp(14px,3cqi,30px);font-size:15px}
 .nl a{color:rgba(255,255,255,.78)}.nl a:hover,.nl a.on{color:#fff}
 .nl a.on{box-shadow:0 2px 0 var(--blush)}
 
 /* Home hero with depth */
-.hero{position:relative;overflow:hidden;color:var(--white);background:var(--leaf)}
+.hero{position:relative;overflow:hidden;color:var(--white);background:var(--forest)}
 .hero .bg{position:absolute;inset:-6%;background:url(assets/bg-foliage.jpg) center/cover;transition:transform .4s cubic-bezier(.2,.7,.2,1);transform:translate3d(calc(var(--px,0)*-12px),calc(var(--py,0)*-8px),0) scale(1.06)}
 .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,14,.62) 0%,rgba(10,24,14,.38) 45%,rgba(10,24,14,.08) 75%,rgba(10,24,14,.18)),linear-gradient(180deg,transparent 60%,rgba(10,24,14,.35))}
 .hero .grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,4cqi,56px);align-items:center;padding-block:clamp(28px,5cqi,64px) clamp(56px,8cqi,104px)}
@@ -48,8 +59,8 @@
 /* Buttons */
 .btn{display:inline-block;background:#fff;color:var(--forest)!important;padding:13px 20px;border-radius:12px;font-weight:600;line-height:1.2}
 .btn.ghost{background:transparent;color:#fff!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
-.btn.dark{background:var(--forest);color:#fff!important}
-.btn.line{background:transparent;color:var(--forest)!important;box-shadow:inset 0 0 0 1px var(--forest)}
+.btn.dark{background:var(--leaf);color:var(--ground)!important}
+.btn.line{background:transparent;color:var(--ink)!important;box-shadow:inset 0 0 0 1px var(--line-edge)}
 .tl{font-weight:600;color:var(--leaf)!important}
 .tl:hover{text-decoration:underline!important;text-underline-offset:3px}
 
@@ -75,8 +86,8 @@
 
 /* Cards (home only) */
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.4cqi,24px)}
-.card{display:block;background:var(--white);border-radius:20px;padding:clamp(20px,3cqi,30px);box-shadow:0 1px 0 var(--rule),0 18px 40px -26px rgba(20,38,27,.35);transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--rule),0 28px 50px -26px rgba(20,38,27,.45)}
+.card{display:block;background:var(--panel);border-radius:20px;padding:clamp(20px,3cqi,30px);box-shadow:var(--edge),0 18px 40px -26px var(--sh);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--edge-hi),0 28px 50px -26px var(--sh-hi)}
 .card h3{font:600 clamp(20px,2.3cqi,24px)/1.15 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:14px 0 10px}
 .card p{margin:0;color:var(--muted);font-size:15px}
 .card p+p{margin-top:10px}
@@ -91,7 +102,7 @@
 @container (max-width:720px){.flow figure:last-child img{max-width:320px}}
 
 /* Featured post panel (home) */
-.art{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:24px;overflow:hidden;background:var(--forest);color:#fff}
+.art{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:24px;overflow:hidden;background:var(--forest);color:#fff;box-shadow:inset 0 0 0 1px var(--art-edge)}
 .art .t{padding:clamp(24px,5cqi,56px)}
 .art .mono{color:var(--blush)}
 .art h3{font:600 clamp(26px,3.4cqi,40px)/1.08 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:14px 0 16px;text-wrap:balance}
@@ -123,12 +134,12 @@ a.row:hover h3{color:var(--leaf)}
 .prose h2{font-size:clamp(26px,3.2cqi,32px);margin-top:1.9em}
 .prose a{color:var(--leaf);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .prose strong{font-weight:600}
-.prose pre{background:var(--forest);color:var(--mint);border-radius:12px;padding:18px 20px;overflow-x:auto;font:14px/1.6 "IBM Plex Mono",monospace}
+.prose pre{background:var(--deep);color:#E9EFE6;box-shadow:inset 0 0 0 1px var(--rule);border-radius:12px;padding:18px 20px;overflow-x:auto;font:14px/1.6 "IBM Plex Mono",monospace}
 .prose ol.steps{list-style:none;padding:0;display:grid;gap:18px;counter-reset:s}
 .prose ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px}
 .prose ol.steps li::before{content:counter(s);font:600 30px/1 "Bricolage Grotesque",sans-serif;color:var(--leaf);padding-top:2px}
 .fig{margin:2.2em auto;max-width:860px}
-.fig img{width:100%;border-radius:12px;box-shadow:0 0 0 1px var(--rule),0 18px 40px -30px rgba(20,38,27,.5)}
+.fig img{width:100%;border-radius:12px;box-shadow:0 0 0 1px var(--rule),0 18px 40px -30px var(--sh-hi)}
 .fig.tall{max-width:640px}.fig.phone{max-width:420px}
 .fig figcaption{font-size:15px;line-height:1.5;color:var(--muted);margin-top:12px;max-width:60ch}
 .pair{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:24px;align-items:start;max-width:960px;margin:2.4em auto}
@@ -158,7 +169,7 @@ a.row:hover h3{color:var(--leaf)}
 .arrow{font:400 clamp(28px,4cqi,44px)/1 "Bricolage Grotesque",sans-serif;color:var(--leaf)}
 
 /* Footer, shared */
-.foot{background:var(--forest);color:#fff;margin-top:clamp(48px,8cqi,96px)}
+.foot{background:var(--deep);color:#fff;border-top:1px solid var(--rule);margin-top:clamp(48px,8cqi,96px)}
 .foot .w{padding-block:clamp(36px,5cqi,56px) 28px}
 .foot .a{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.14)}
 .foot h2{color:#fff}
@@ -171,7 +182,7 @@ a.row:hover h3{color:var(--leaf)}
 .grp:first-child{padding-top:0}
 .grp img{height:34px;width:auto}
 .grp img.wm{height:18px}
-.grp h2,.grp h3{font:600 clamp(22px,2.8cqi,30px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0;color:var(--forest)}
+.grp h2,.grp h3{font:600 clamp(22px,2.8cqi,30px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0;color:var(--ink)}
 /* Experience: one block per job */
 .job{padding-block:clamp(28px,4cqi,44px);border-top:1px solid var(--rule)}
 .job .grp{padding-block:0 6px}
@@ -182,10 +193,11 @@ a.row:hover h3{color:var(--leaf)}
 .hl li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--leaf)}
 .hl .tl{white-space:nowrap}
 .job .stack{margin:0}
-div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px rgba(20,38,27,.35)}
+div.card:hover{transform:none;box-shadow:var(--edge),0 18px 40px -26px var(--sh)}
 .card .tl{display:inline-block;margin-top:14px}
 .grp .mono{margin-left:auto}
 .card .lg{height:26px;width:auto;margin-bottom:14px}
+.card .lg.pf{height:36px;margin-bottom:9px}
 
 
 .tw{overflow-x:auto}
@@ -210,11 +222,11 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
 <main id="main">
   <div class="hero" data-tilt>
     <div class="bg" aria-hidden="true"></div>
-    <nav class="nav" aria-label="Main"><div class="w"><a class="logo" href="./">Emmanuel Obot</a><span class="nl"><a href="#experience" data-n="experience">Experience</a><a href="#projects" data-n="projects">Projects</a><a href="blog/" data-n="blog">Blog</a></span></div></nav>
+    <nav class="nav" aria-label="Main"><div class="w"><a class="logo" href="./">Emmanuel Obot</a><span class="nl"><a href="#experience" data-n="experience">Experience</a><a href="#projects" data-n="projects">Projects</a><a href="blog/" data-n="blog">Blog</a><button class="mode" type="button" hidden aria-label="Switch to light mode"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 1 1 9.4 4a6.6 6.6 0 0 0 10.6 10.6z"/></svg></button></span></div></nav>
     <div class="w grid">
       <div class="txt">
         <h1>Hi, I’m Emmanuel.</h1>
-        <p class="lead">I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. I also look after the systems at Amela Pharmacy, and I’m building PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.</p>
+        <p class="lead">I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy and built PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.</p>
         <div class="acts"><a class="btn" href="#experience">See my experience</a><a class="btn ghost" href="blog/">Read my blog</a></div>
       </div>
       <figure class="me"><img src="assets/portrait.webp" width="1254" height="1254" alt="Emmanuel Obot, smiling, in a navy waistcoat and pink tie"></figure>
@@ -224,7 +236,7 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
   <div class="w sec" id="about-me">
     <div class="sh"><h2>About me</h2></div>
     <div class="bio">
-      <p>Java is the language I know best, mostly with Spring Boot. These days I also write a lot of Python for ERPNext, some TypeScript, and Windows apps in C# and .NET.</p>
+      <p>Java is the language I know best, mostly with Spring Boot. I’ve also written a lot of Python for ERPNext, some TypeScript, and Windows apps in C# and .NET.</p>
       <p>On my own projects I decide what gets built and review it, and AI coding agents write much of the code. Nothing merges without tests and a review.</p>
       <p>I studied Mechatronics Engineering at the University of Manchester, with a year at Mercedes-AMG High Performance Powertrains in the middle.</p>
     </div>
@@ -233,7 +245,7 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
   <div class="w" id="experience">
     <div class="sh"><h2>Experience</h2></div>
     <div class="job">
-      <div class="grp"><img src="assets/logos/lexisnexis-risk-solutions.webp" width="145" height="34" alt="LexisNexis Risk Solutions"><h3>LexisNexis Risk Solutions</h3><span class="mono">Oct 2026 – now · contract</span></div>
+      <div class="grp"><img class="dm" src="assets/logos/themed/lexisnexis-risk-solutions-dark.png" width="140" height="34" alt="LexisNexis Risk Solutions"><img class="lm" src="assets/logos/themed/lexisnexis-risk-solutions.png" width="140" height="34" alt="LexisNexis Risk Solutions"><h3>LexisNexis Risk Solutions</h3><span class="mono">Oct 2026 – now · contract</span></div>
       <p class="role">Full-Stack Java Software Engineer</p>
       <p class="sum">A contract role on a product team. Most of my work is on the backend, and I take features from the first idea through to production with product managers, designers and QA.</p>
       <ul class="hl">
@@ -247,33 +259,33 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
     </div>
 
     <div class="job">
-      <div class="grp"><img src="assets/logos/amela-mark.svg" width="34" height="34" alt=""><h3>Amela Pharmacy</h3><span class="mono">Oct 2024 – now</span></div>
+      <div class="grp"><img class="dm" src="assets/logos/themed/amela-mark-dark.svg" width="34" height="34" alt=""><img class="lm" src="assets/logos/amela-mark.svg" width="34" height="34" alt=""><h3>Amela Pharmacy</h3><span class="mono">Oct 2024 – Oct 2026</span></div>
       <p class="role">Platform Owner</p>
-      <p class="sum">I look after AmelaStock, the ERPNext system the pharmacy runs on: stock, the online shop, HR and attendance. I’m also building its till app, AmelaStockPOS.</p>
+      <p class="sum">I looked after AmelaStock, the ERPNext system the pharmacy runs on: stock, the online shop, HR and attendance. I also worked on its till app, AmelaStockPOS.</p>
       <ul class="hl">
         <li>Built Product Intake, a workflow on top of ERPNext that uses AI to add products to the inventory from two photos of a pack. It cut the time to add a product from 30–45 minutes to about five, has added about 3,500 products, and staff still use it for new stock. <a class="tl" href="product-intake/">Read the write-up →</a></li>
         <li>Built Blogbot and the Health Observance calendar, AI pipelines that write the pharmacy’s blog articles and health-day posts, with sourced claims, a second AI reviewer, and my approval for sensitive topics. <a class="tl" href="#blogbot">See how it works →</a></li>
-        <li>Ship changes as Docker image releases: 156 since March 2026.</li>
-        <li>Connected fingerprint clocks to ERPNext, with alerts for late arrivals and missed shifts. In October I fixed a gap in the attendance records, linking 263 check-ins without duplicates.</li>
+        <li>Shipped changes as Docker image releases: 145 between March and October 2026.</li>
+        <li>Connected fingerprint clocks to ERPNext, with alerts for late arrivals and missed shifts. In October 2026 I fixed a gap in the attendance records, linking 263 check-ins without duplicates.</li>
         <li>Set up the staff email accounts and built small tools to manage them.</li>
-        <li>Fixed how Google finds amelapharmacy.com, with one main address, a working robots.txt and a clean sitemap. Redesigned the site in November 2026.</li>
-        <li>Building AmelaStockPOS, a Windows till app that keeps working without the internet and syncs sales to AmelaStock without counting one twice.</li>
+        <li>Fixed how Google finds amelapharmacy.com, with one main address, a working robots.txt and a clean sitemap.</li>
+        <li>Worked on AmelaStockPOS, a Windows till app that keeps working without the internet and syncs sales to AmelaStock without counting one twice.</li>
       </ul>
       <p class="mono stack">Python · Frappe · ERPNext · Docker · C# · .NET · WinUI 3 · SQLite</p>
     </div>
     <div class="job">
-      <div class="grp"><img src="assets/logos/psy-metal-alloy.svg" width="71" height="34" alt=""><h3>PSY Metal &amp; Alloy</h3><span class="mono">June 2026 – now · client</span></div>
+      <div class="grp"><img class="dm" src="assets/logos/themed/psy-metal-alloy-dark.svg" width="71" height="34" alt=""><img class="lm" src="assets/logos/psy-metal-alloy.svg" width="71" height="34" alt=""><h3>PSY Metal &amp; Alloy</h3><span class="mono">June 2026 – Oct 2026 · client</span></div>
       <p class="role">Product owner and developer, PSY Forge</p>
       <p class="sum">PSY Metal &amp; Alloy makes aluminium and zinc alloy ingots in Coimbatore, India. PSY Forge is the ERP I built to run their operations. It’s a private system for their team.</p>
       <ul class="hl">
         <li>Follows each batch from buying scrap and checking its quality, through sorting, furnace melts and chemistry tests, to finished ingots, sales and dispatch.</li>
         <li>Built as a Frappe and ERPNext app, after the client approved the designs in June 2026.</li>
-        <li>I set what gets built and review it. Codex and Claude agents write most of the code.</li>
+        <li>I set what got built and reviewed it. Codex and Claude agents wrote most of the code.</li>
       </ul>
       <p class="mono stack">Python · Frappe · ERPNext · Docker · <a class="tl" href="https://psymetalandalloy.com/" target="_blank" rel="noopener">psymetalandalloy.com ↗</a></p>
     </div>
     <div class="job">
-      <div class="grp"><img src="assets/logos/thg-ingenuity-mark.svg" width="34" height="34" alt=""><h3>THG Ingenuity</h3><span class="mono">Sept 2021 – June 2026</span></div>
+      <div class="grp"><img class="dm" src="assets/logos/themed/thg-ingenuity-mark-dark.svg" width="34" height="34" alt=""><img class="lm" src="assets/logos/thg-ingenuity-mark.svg" width="34" height="34" alt=""><h3>THG Ingenuity</h3><span class="mono">Sept 2021 – June 2026</span></div>
       <p class="role">Software Engineer</p>
       <p class="sum">Nearly five years on the services behind THG’s online shops, mostly in Java and Spring Boot, with TypeScript and Angular too. In my last years there I brought AI into some of them.</p>
       <ul class="hl">
@@ -287,7 +299,7 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
       <p class="mono stack">Java · Spring Boot · GraphQL · ActiveMQ · TypeScript · NestJS · Angular · GKE · MCP</p>
     </div>
     <div class="job">
-      <div class="grp"><img class="wm" src="assets/logos/mercedes-amg-hpp.webp" width="158" height="18" alt="Mercedes-AMG High Performance Powertrains"><h3>Mercedes-AMG HPP</h3><span class="mono">Sept 2019 – Sept 2020 · placement · Brixworth</span></div>
+      <div class="grp"><img class="wm dm" src="assets/logos/themed/mercedes-amg-hpp-dark.png" width="152" height="18" alt="Mercedes-AMG High Performance Powertrains"><img class="wm lm" src="assets/logos/themed/mercedes-amg-hpp.png" width="152" height="18" alt="Mercedes-AMG High Performance Powertrains"><h3>Mercedes-AMG HPP</h3><span class="mono">Sept 2019 – Sept 2020 · placement · Brixworth</span></div>
       <p class="role">Software and Controls Placement</p>
       <p class="sum">My year in industry during my degree, at HPP in Brixworth, where Mercedes builds its Formula 1 power units. I worked on their control software.</p>
       <ul class="hl">
@@ -306,16 +318,16 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
   <div class="w sec" id="projects">
     <div class="sh"><h2>Projects</h2></div>
     <div class="cards pj">
-      <a class="card wide" href="product-intake/"><img class="lg" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>Product Intake</h3><p>A workflow on top of ERPNext that uses AI to add products to the pharmacy’s inventory. Staff photograph the front and back of a pack. It reads the photos and barcode, checks them against 11,495 old stock records, and drafts the product record with a clean catalogue photo. A person checks each draft before it’s saved.</p><p>It cut the time to add a product from 30–45 minutes to about five. It has added about 3,500 products, 95% of the stock the pharmacy kept, and staff still use it to add new products today.</p><span class="tl">Read the write-up →</span></a>
-      <div class="card wide" id="blogbot"><img class="lg" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>Blogbot and the Health Observance calendar</h3><p>Two AI pipelines that write Amela Pharmacy’s health posts. Blogbot picks a topic from what people search for, researches it and writes an article for the pharmacy’s blog. The Health Observance calendar holds the year’s health days, such as World Lung Cancer Day, each with a link to its official source. Both feed one step that makes a poster and a caption for Facebook, Instagram and LinkedIn.</p><p>Most of the work goes into keeping the posts accurate. Each medical claim must come from a source the AI opened, and code checks the links and dates. A second AI reviews each article and caption and can send it back for fixes. The photos are made with no words in them. Code adds the text and logo, then an AI check looks for mistakes such as odd hands. Sensitive topics wait for my approval by email, and a log stops anything going out twice.</p>
+      <a class="card wide" href="product-intake/"><img class="lg dm" src="assets/logos/themed/amela-mark-dark.svg" width="26" height="26" alt=""><img class="lg lm" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>Product Intake</h3><p>A workflow on top of ERPNext that uses AI to add products to the pharmacy’s inventory. Staff photograph the front and back of a pack. It reads the photos and barcode, checks them against 11,495 old stock records, and drafts the product record with a clean catalogue photo. A person checks each draft before it’s saved.</p><p>It cut the time to add a product from 30–45 minutes to about five. It has added about 3,500 products, 95% of the stock the pharmacy kept, and staff still use it to add new products today.</p><span class="tl">Read the write-up →</span></a>
+      <div class="card wide" id="blogbot"><img class="lg dm" src="assets/logos/themed/amela-mark-dark.svg" width="26" height="26" alt=""><img class="lg lm" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>Blogbot and the Health Observance calendar</h3><p>Two AI pipelines that write Amela Pharmacy’s health posts. Blogbot picks a topic from what people search for, researches it and writes an article for the pharmacy’s blog. The Health Observance calendar holds the year’s health days, such as World Lung Cancer Day, each with a link to its official source. Both feed one step that makes a poster and a caption for Facebook, Instagram and LinkedIn.</p><p>Most of the work goes into keeping the posts accurate. Each medical claim must come from a source the AI opened, and code checks the links and dates. A second AI reviews each article and caption and can send it back for fixes. The photos are made with no words in them. Code adds the text and logo, then an AI check looks for mistakes such as odd hands. Sensitive topics wait for a person’s approval by email, and a log stops anything going out twice.</p>
         <div class="flow">
           <figure><img loading="lazy" decoding="async" src="assets/posts/observance-calendar.webp" width="1044" height="658" loading="lazy" alt="The Health Observance Calendar in AmelaStock for November 2026, with health days, weeks and months on it."><figcaption><span class="mono">1 · The calendar</span>The calendar in AmelaStock. It holds 167 health days, weeks and months for 2026.</figcaption></figure>
           <figure><img loading="lazy" decoding="async" src="assets/posts/lung-cancer-facebook.webp" width="1200" height="630" loading="lazy" alt="Amela Pharmacy poster for World Lung Cancer Day: a woman waits on a bench outside a pharmacy. Text: Ask clearer questions about screening and prevention."><figcaption><span class="mono">2 · A health-day poster</span>Made for World Lung Cancer Day and <a href="https://www.facebook.com/1626636256134888/posts/1721586456639867" target="_blank" rel="noopener">posted to Facebook</a> on 1 August. The photo is AI-made; code adds the words and logo.</figcaption></figure>
           <figure><img loading="lazy" decoding="async" src="assets/posts/fertility-instagram.webp" width="720" height="900" loading="lazy" alt="Amela Pharmacy Instagram poster for the article Your First Fertility Appointment: What Both Partners Can Prepare."><figcaption><span class="mono">3 · An article, shared</span>A Blogbot <a href="https://amelapharmacy.com/blog/medication-safety-pharmacy-tips/your-first-fertility-appointment-what-both-partners-can-prepare" target="_blank" rel="noopener">article</a>, posted on 11 November to <a href="https://www.instagram.com/p/DflXY_ZCmww/" target="_blank" rel="noopener">Instagram</a>, <a href="https://www.facebook.com/1626636256134888/posts/1834799885318523" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.linkedin.com/feed/update/urn:li:share:7526102512781889536/" target="_blank" rel="noopener">LinkedIn</a>.</figcaption></figure>
         </div>
       </div>
-      <div class="card"><img class="lg" src="assets/logos/psy-forge.webp" width="144" height="36" alt="PSY Forge" style="height:36px;margin:-5px 0 9px -6px"><span class="mono">PSY Metal &amp; Alloy · 2026</span><h3>PSY Forge</h3><p>The ERP I built for an aluminium and zinc alloy maker in India, from buying scrap to selling ingots. It’s a private system for their team.</p></div>
-      <div class="card"><img class="lg" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>AmelaStockPOS</h3><p>Amela Pharmacy’s Windows till app. It keeps working when the internet drops, then syncs sales to AmelaStock without counting one twice.</p></div>
+      <div class="card"><img class="lg pf dm" src="assets/logos/themed/psy-forge-dark.png" width="139" height="36" alt="PSY Forge"><img class="lg pf lm" src="assets/logos/themed/psy-forge.png" width="139" height="36" alt="PSY Forge"><span class="mono">PSY Metal &amp; Alloy · 2026</span><h3>PSY Forge</h3><p>The ERP I built for an aluminium and zinc alloy maker in India, from buying scrap to selling ingots. It’s a private system for their team.</p></div>
+      <div class="card"><img class="lg dm" src="assets/logos/themed/amela-mark-dark.svg" width="26" height="26" alt=""><img class="lg lm" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>AmelaStockPOS</h3><p>Amela Pharmacy’s Windows till app. It keeps working when the internet drops, then syncs sales to AmelaStock without counting one twice.</p></div>
     </div>
   </div>
 
@@ -344,6 +356,17 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
   <div class="b"><span>Emmanuel Obot · Manchester</span><span><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="blog/">Blog</a><a href="#find-me">Find me</a></span></div>
 </div></footer>
 </div>
+<script>
+(function(){
+    var r=document.documentElement;
+    function light(){return r.getAttribute('data-mode')==='light'}
+    function sync(){[].forEach.call(document.querySelectorAll('.mode'),function(b){b.hidden=false;var t=light()?'Switch to dark mode':'Switch to light mode';b.setAttribute('aria-label',t);b.title=t})}
+    document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.mode');if(!b)return;
+      var m=light()?'dark':'light';if(m==='light')r.setAttribute('data-mode','light');else r.removeAttribute('data-mode');
+      try{localStorage.setItem('eo-mode',m)}catch(x){}sync()});
+    sync();
+  })();
+</script>
 <script>
 (function(){
   if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;

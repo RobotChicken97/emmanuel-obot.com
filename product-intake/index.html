@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>try{if(localStorage.getItem('eo-mode')==='light')document.documentElement.setAttribute('data-mode','light')}catch(e){}</script>
 <title>Product Intake · Emmanuel Obot</title>
 <meta name="description" content="How staff at Amela Pharmacy add a product to ERPNext with two photos, and why a person still checks every draft.">
 <link rel="canonical" href="https://emmanuel-obot.com/product-intake/">
@@ -13,15 +14,25 @@
 <meta property="og:url" content="https://emmanuel-obot.com/product-intake/">
 <meta property="og:image" content="https://emmanuel-obot.com/assets/og.jpg">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#14261B">
+<meta name="theme-color" content="#0E1912">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>*{box-sizing:border-box}html{background:#14261B;scroll-padding-top:12px}body{margin:0;background:#F3F6F0}[hidden]{display:none!important}:focus-visible{outline:2px solid #2E4A2C;outline-offset:3px}.nav :focus-visible,.hero :focus-visible,.ph :focus-visible,.foot :focus-visible,.art :focus-visible{outline-color:#F0CFD8}.skip{position:absolute;left:12px;top:-60px;z-index:9;background:#fff;color:#14261B;padding:10px 14px;border-radius:10px;font:600 15px/1 "Bricolage Grotesque",system-ui,sans-serif}.skip:focus{top:12px}.site{min-height:100vh;display:flex;flex-direction:column}.site>main{flex:1}
-/* ---------- The site (one deliberate light world, same in both themes) ---------- */
-.site{--forest:#14261B;--leaf:#2E4A2C;--mint:#F3F6F0;--muted:#5C6B60;--rule:#DCE3D9;--blush:#F0CFD8;--white:#FFFFFF;
-  container-type:inline-size;overflow:hidden;background:var(--mint);color:var(--forest);font:400 16px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+<style>*{box-sizing:border-box}html{background:#09110C;scroll-padding-top:12px}body{margin:0;background:#0E1912;color-scheme:dark}[hidden]{display:none!important}:focus-visible{outline:2px solid #B9D3B0;outline-offset:3px}.nav :focus-visible,.hero :focus-visible,.ph :focus-visible,.foot :focus-visible,.art :focus-visible{outline-color:#F0CFD8}.skip{position:absolute;left:12px;top:-60px;z-index:9;background:#fff;color:#14261B;padding:10px 14px;border-radius:10px;font:600 15px/1 "Bricolage Grotesque",system-ui,sans-serif}.skip:focus{top:12px}.site{min-height:100vh;display:flex;flex-direction:column}.site>main{flex:1}html[data-mode=light]{background:#14261B}html[data-mode=light] body{background:#F3F6F0;color-scheme:light}html[data-mode=light] :focus-visible{outline-color:#2E4A2C}
+/* ---------- The site: dark by default, light when the visitor picks it (data-mode on <html>) ---------- */
+.site{--ground:#0E1912;--panel:#15241A;--forest:#14261B;--deep:#09110C;--ink:#E9EFE6;--leaf:#B9D3B0;--mint:#F3F6F0;--muted:#A2B3A6;--rule:#2A3F31;--blush:#F0CFD8;--white:#FFFFFF;
+  --edge:inset 0 0 0 1px var(--rule);--edge-hi:inset 0 0 0 1px rgba(185,211,176,.35);--line-edge:rgba(233,239,230,.45);--art-edge:var(--rule);--sh:rgba(0,0,0,.6);--sh-hi:rgba(0,0,0,.7);
+  color-scheme:dark;container-type:inline-size;overflow:hidden;background:var(--ground);color:var(--ink);font:400 16px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+:root[data-mode="light"] .site{--ground:#F3F6F0;--panel:#FFFFFF;--deep:#14261B;--ink:#14261B;--leaf:#2E4A2C;--muted:#5C6B60;--rule:#DCE3D9;color-scheme:light;
+  --edge:0 1px 0 var(--rule);--edge-hi:0 1px 0 var(--rule);--line-edge:var(--forest);--art-edge:transparent;--sh:rgba(20,38,27,.35);--sh-hi:rgba(20,38,27,.45)}
+/* Logos: each has a light-mode file and a dark-mode file; only the one for the current mode shows */
+.site .lm{display:none}:root[data-mode="light"] .site .lm{display:block}:root[data-mode="light"] .site .dm{display:none}
+/* Light/dark switch in the nav (it sits on the dark header in both modes) */
+.mode{display:inline-grid;place-items:center;width:36px;height:36px;margin:-8px 0;border:0;border-radius:10px;background:transparent;color:rgba(255,255,255,.85);cursor:pointer;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.mode:hover{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
+/* The icon shows the mode a click switches to: a sun in dark mode, a moon in light mode */
+.mode svg{width:18px;height:18px;display:block}.mode .moon{display:none}:root[data-mode="light"] .mode .moon{display:block}:root[data-mode="light"] .mode .sun{display:none}
 .site a{text-decoration:none;color:inherit}
 .site .w{max-width:1200px;margin:0 auto;padding-inline:clamp(20px,5cqi,72px)}
 .site img{display:block;max-width:100%;height:auto}
@@ -31,12 +42,12 @@
 .nav{position:relative;z-index:3}
 .nav .w{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px}
 .logo{font:600 18px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;color:#fff}
-.nl{display:flex;gap:clamp(14px,3cqi,30px);font-size:15px}
+.nl{display:flex;align-items:center;gap:clamp(14px,3cqi,30px);font-size:15px}
 .nl a{color:rgba(255,255,255,.78)}.nl a:hover,.nl a.on{color:#fff}
 .nl a.on{box-shadow:0 2px 0 var(--blush)}
 
 /* Home hero with depth */
-.hero{position:relative;overflow:hidden;color:var(--white);background:var(--leaf)}
+.hero{position:relative;overflow:hidden;color:var(--white);background:var(--forest)}
 .hero .bg{position:absolute;inset:-6%;background:url(../assets/bg-foliage.jpg) center/cover;transition:transform .4s cubic-bezier(.2,.7,.2,1);transform:translate3d(calc(var(--px,0)*-12px),calc(var(--py,0)*-8px),0) scale(1.06)}
 .hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,14,.62) 0%,rgba(10,24,14,.38) 45%,rgba(10,24,14,.08) 75%,rgba(10,24,14,.18)),linear-gradient(180deg,transparent 60%,rgba(10,24,14,.35))}
 .hero .grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,4cqi,56px);align-items:center;padding-block:clamp(28px,5cqi,64px) clamp(56px,8cqi,104px)}
@@ -48,8 +59,8 @@
 /* Buttons */
 .btn{display:inline-block;background:#fff;color:var(--forest)!important;padding:13px 20px;border-radius:12px;font-weight:600;line-height:1.2}
 .btn.ghost{background:transparent;color:#fff!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
-.btn.dark{background:var(--forest);color:#fff!important}
-.btn.line{background:transparent;color:var(--forest)!important;box-shadow:inset 0 0 0 1px var(--forest)}
+.btn.dark{background:var(--leaf);color:var(--ground)!important}
+.btn.line{background:transparent;color:var(--ink)!important;box-shadow:inset 0 0 0 1px var(--line-edge)}
 .tl{font-weight:600;color:var(--leaf)!important}
 .tl:hover{text-decoration:underline!important;text-underline-offset:3px}
 
@@ -75,8 +86,8 @@
 
 /* Cards (home only) */
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.4cqi,24px)}
-.card{display:block;background:var(--white);border-radius:20px;padding:clamp(20px,3cqi,30px);box-shadow:0 1px 0 var(--rule),0 18px 40px -26px rgba(20,38,27,.35);transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--rule),0 28px 50px -26px rgba(20,38,27,.45)}
+.card{display:block;background:var(--panel);border-radius:20px;padding:clamp(20px,3cqi,30px);box-shadow:var(--edge),0 18px 40px -26px var(--sh);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--edge-hi),0 28px 50px -26px var(--sh-hi)}
 .card h3{font:600 clamp(20px,2.3cqi,24px)/1.15 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:14px 0 10px}
 .card p{margin:0;color:var(--muted);font-size:15px}
 .card p+p{margin-top:10px}
@@ -91,7 +102,7 @@
 @container (max-width:720px){.flow figure:last-child img{max-width:320px}}
 
 /* Featured post panel (home) */
-.art{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:24px;overflow:hidden;background:var(--forest);color:#fff}
+.art{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:24px;overflow:hidden;background:var(--forest);color:#fff;box-shadow:inset 0 0 0 1px var(--art-edge)}
 .art .t{padding:clamp(24px,5cqi,56px)}
 .art .mono{color:var(--blush)}
 .art h3{font:600 clamp(26px,3.4cqi,40px)/1.08 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:14px 0 16px;text-wrap:balance}
@@ -123,12 +134,12 @@ a.row:hover h3{color:var(--leaf)}
 .prose h2{font-size:clamp(26px,3.2cqi,32px);margin-top:1.9em}
 .prose a{color:var(--leaf);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .prose strong{font-weight:600}
-.prose pre{background:var(--forest);color:var(--mint);border-radius:12px;padding:18px 20px;overflow-x:auto;font:14px/1.6 "IBM Plex Mono",monospace}
+.prose pre{background:var(--deep);color:#E9EFE6;box-shadow:inset 0 0 0 1px var(--rule);border-radius:12px;padding:18px 20px;overflow-x:auto;font:14px/1.6 "IBM Plex Mono",monospace}
 .prose ol.steps{list-style:none;padding:0;display:grid;gap:18px;counter-reset:s}
 .prose ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px}
 .prose ol.steps li::before{content:counter(s);font:600 30px/1 "Bricolage Grotesque",sans-serif;color:var(--leaf);padding-top:2px}
 .fig{margin:2.2em auto;max-width:860px}
-.fig img{width:100%;border-radius:12px;box-shadow:0 0 0 1px var(--rule),0 18px 40px -30px rgba(20,38,27,.5)}
+.fig img{width:100%;border-radius:12px;box-shadow:0 0 0 1px var(--rule),0 18px 40px -30px var(--sh-hi)}
 .fig.tall{max-width:640px}.fig.phone{max-width:420px}
 .fig figcaption{font-size:15px;line-height:1.5;color:var(--muted);margin-top:12px;max-width:60ch}
 .pair{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:24px;align-items:start;max-width:960px;margin:2.4em auto}
@@ -158,7 +169,7 @@ a.row:hover h3{color:var(--leaf)}
 .arrow{font:400 clamp(28px,4cqi,44px)/1 "Bricolage Grotesque",sans-serif;color:var(--leaf)}
 
 /* Footer, shared */
-.foot{background:var(--forest);color:#fff;margin-top:clamp(48px,8cqi,96px)}
+.foot{background:var(--deep);color:#fff;border-top:1px solid var(--rule);margin-top:clamp(48px,8cqi,96px)}
 .foot .w{padding-block:clamp(36px,5cqi,56px) 28px}
 .foot .a{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.14)}
 .foot h2{color:#fff}
@@ -171,7 +182,7 @@ a.row:hover h3{color:var(--leaf)}
 .grp:first-child{padding-top:0}
 .grp img{height:34px;width:auto}
 .grp img.wm{height:18px}
-.grp h2,.grp h3{font:600 clamp(22px,2.8cqi,30px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0;color:var(--forest)}
+.grp h2,.grp h3{font:600 clamp(22px,2.8cqi,30px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0;color:var(--ink)}
 /* Experience: one block per job */
 .job{padding-block:clamp(28px,4cqi,44px);border-top:1px solid var(--rule)}
 .job .grp{padding-block:0 6px}
@@ -182,10 +193,11 @@ a.row:hover h3{color:var(--leaf)}
 .hl li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--leaf)}
 .hl .tl{white-space:nowrap}
 .job .stack{margin:0}
-div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px rgba(20,38,27,.35)}
+div.card:hover{transform:none;box-shadow:var(--edge),0 18px 40px -26px var(--sh)}
 .card .tl{display:inline-block;margin-top:14px}
 .grp .mono{margin-left:auto}
 .card .lg{height:26px;width:auto;margin-bottom:14px}
+.card .lg.pf{height:36px;margin-bottom:9px}
 
 
 .tw{overflow-x:auto}
@@ -208,7 +220,7 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
 <a class="skip" href="#main">Skip to content</a>
 <div class="site">
 <main id="main">
-  <div class="ph"><nav class="nav" aria-label="Main"><div class="w"><a class="logo" href="../">Emmanuel Obot</a><span class="nl"><a href="../#experience" data-n="experience">Experience</a><a href="../#projects" data-n="projects" class="on" aria-current="page">Projects</a><a href="../blog/" data-n="blog">Blog</a></span></div></nav><div class="in w">
+  <div class="ph"><nav class="nav" aria-label="Main"><div class="w"><a class="logo" href="../">Emmanuel Obot</a><span class="nl"><a href="../#experience" data-n="experience">Experience</a><a href="../#projects" data-n="projects" class="on" aria-current="page">Projects</a><a href="../blog/" data-n="blog">Blog</a><button class="mode" type="button" hidden aria-label="Switch to light mode"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 1 1 9.4 4a6.6 6.6 0 0 0 10.6 10.6z"/></svg></button></span></div></nav><div class="in w">
     <span class="mono">Amela Pharmacy · 2026</span>
     <h1>Product Intake</h1>
     <p class="lead">How staff add a product to ERPNext with two photos, and why a person still checks every draft.</p>
@@ -245,7 +257,7 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
     <div class="prose" style="padding-bottom:8px">
       <h2 style="margin-top:.6em">Where it is now</h2>
       <p>By 4 September 2026 we’d processed about 3,500 products this way. That’s around 95% of the stock we decided to keep after clearing out old and invalid rows. It isn’t a measure of how often the model is right.</p>
-      <p>Next I want to measure changes properly. That means keeping photos of the same product together when I split the data, and keeping the awkward look-alike packs in the test set.</p>
+      <p>The next step I planned was to measure changes properly. That means keeping photos of the same product together when the data is split, and keeping the awkward look-alike packs in the test set.</p>
       <p><a href="../blog/11000-messy-inventory-rows/">Read the full story on my blog</a></p>
     </div>
   </div>
@@ -255,5 +267,16 @@ div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px r
   <div class="b"><span>Emmanuel Obot · Manchester</span><span><a href="../#experience">Experience</a><a href="../#projects">Projects</a><a href="../blog/">Blog</a><a href="../#find-me">Find me</a></span></div>
 </div></footer>
 </div>
+<script>
+(function(){
+    var r=document.documentElement;
+    function light(){return r.getAttribute('data-mode')==='light'}
+    function sync(){[].forEach.call(document.querySelectorAll('.mode'),function(b){b.hidden=false;var t=light()?'Switch to dark mode':'Switch to light mode';b.setAttribute('aria-label',t);b.title=t})}
+    document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.mode');if(!b)return;
+      var m=light()?'dark':'light';if(m==='light')r.setAttribute('data-mode','light');else r.removeAttribute('data-mode');
+      try{localStorage.setItem('eo-mode',m)}catch(x){}sync()});
+    sync();
+  })();
+</script>
 </body>
 </html>
