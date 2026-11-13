@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Emmanuel Obot · Software engineer in Manchester</title>
+<meta name="description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. I also look after the systems at Amela Pharmacy, and I’m building PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
+<link rel="canonical" href="https://emmanuel-obot.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Emmanuel Obot">
+<meta property="og:title" content="Emmanuel Obot · Software engineer in Manchester">
+<meta property="og:description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. I also look after the systems at Amela Pharmacy, and I’m building PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
+<meta property="og:url" content="https://emmanuel-obot.com/">
+<meta property="og:image" content="https://emmanuel-obot.com/assets/og.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14261B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>*{box-sizing:border-box}html{background:#14261B;scroll-padding-top:12px}body{margin:0;background:#F3F6F0}[hidden]{display:none!important}:focus-visible{outline:2px solid #2E4A2C;outline-offset:3px}.nav :focus-visible,.hero :focus-visible,.ph :focus-visible,.foot :focus-visible,.art :focus-visible{outline-color:#F0CFD8}.skip{position:absolute;left:12px;top:-60px;z-index:9;background:#fff;color:#14261B;padding:10px 14px;border-radius:10px;font:600 15px/1 "Bricolage Grotesque",system-ui,sans-serif}.skip:focus{top:12px}.site{min-height:100vh;display:flex;flex-direction:column}.site>main{flex:1}
+/* ---------- The site (one deliberate light world, same in both themes) ---------- */
+.site{--forest:#14261B;--leaf:#2E4A2C;--mint:#F3F6F0;--muted:#5C6B60;--rule:#DCE3D9;--blush:#F0CFD8;--white:#FFFFFF;
+  container-type:inline-size;overflow:hidden;background:var(--mint);color:var(--forest);font:400 16px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
+.site a{text-decoration:none;color:inherit}
+.site .w{max-width:1200px;margin:0 auto;padding-inline:clamp(20px,5cqi,72px)}
+.site img{display:block;max-width:100%;height:auto}
+.mono{font:12.5px/1.5 "IBM Plex Mono",monospace;color:var(--muted)}
+
+/* Nav, shared */
+.nav{position:relative;z-index:3}
+.nav .w{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:24px}
+.logo{font:600 18px/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;color:#fff}
+.nl{display:flex;gap:clamp(14px,3cqi,30px);font-size:15px}
+.nl a{color:rgba(255,255,255,.78)}.nl a:hover,.nl a.on{color:#fff}
+.nl a.on{box-shadow:0 2px 0 var(--blush)}
+
+/* Home hero with depth */
+.hero{position:relative;overflow:hidden;color:var(--white);background:var(--leaf)}
+.hero .bg{position:absolute;inset:-6%;background:url(assets/bg-foliage.jpg) center/cover;transition:transform .4s cubic-bezier(.2,.7,.2,1);transform:translate3d(calc(var(--px,0)*-12px),calc(var(--py,0)*-8px),0) scale(1.06)}
+.hero .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,14,.62) 0%,rgba(10,24,14,.38) 45%,rgba(10,24,14,.08) 75%,rgba(10,24,14,.18)),linear-gradient(180deg,transparent 60%,rgba(10,24,14,.35))}
+.hero .grid{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(24px,4cqi,56px);align-items:center;padding-block:clamp(28px,5cqi,64px) clamp(56px,8cqi,104px)}
+.hero .txt{transition:transform .4s cubic-bezier(.2,.7,.2,1);transform:translate3d(calc(var(--px,0)*10px),calc(var(--py,0)*6px),0)}
+.hero h1{font:400 clamp(44px,7cqi,88px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0 0 22px}
+.lead{font-size:clamp(17px,1.9cqi,20px);line-height:1.6;color:rgba(255,255,255,.88);max-width:44ch;margin:0}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+
+/* Buttons */
+.btn{display:inline-block;background:#fff;color:var(--forest)!important;padding:13px 20px;border-radius:12px;font-weight:600;line-height:1.2}
+.btn.ghost{background:transparent;color:#fff!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.5)}
+.btn.dark{background:var(--forest);color:#fff!important}
+.btn.line{background:transparent;color:var(--forest)!important;box-shadow:inset 0 0 0 1px var(--forest)}
+.tl{font-weight:600;color:var(--leaf)!important}
+.tl:hover{text-decoration:underline!important;text-underline-offset:3px}
+
+/* The portrait: the original photo, never enlarged, faded into the green */
+.me{justify-self:center;width:clamp(200px,24cqi,300px);margin:0;transition:transform .4s cubic-bezier(.2,.7,.2,1);transform:translate3d(calc(var(--px,0)*-6px),calc(var(--py,0)*-4px),0)}
+.me img{width:100%;aspect-ratio:1;-webkit-mask-image:radial-gradient(ellipse 46% 47% at 54% 48%,#000 46%,rgba(0,0,0,.7) 70%,transparent 100%);mask-image:radial-gradient(ellipse 46% 47% at 54% 48%,#000 46%,rgba(0,0,0,.7) 70%,transparent 100%)}
+
+/* Inner page header: same leaves, darker and still */
+.ph{position:relative;overflow:hidden;color:#fff;background:var(--forest)}
+.ph::before{content:"";position:absolute;inset:0;background:url(assets/bg-foliage.jpg) center 35%/cover;opacity:.55}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,24,14,.75),rgba(10,24,14,.35) 70%,rgba(10,24,14,.2))}
+.ph .in{position:relative;z-index:2;padding-block:clamp(20px,4cqi,48px) clamp(44px,7cqi,84px)}
+.ph .mono{color:var(--blush)}
+.ph h1{font:400 clamp(40px,6cqi,72px)/1.02 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:10px 0 18px;max-width:20ch;text-wrap:balance}
+.ph .lead{max-width:52ch}
+.ph.split .in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:clamp(24px,4cqi,56px);align-items:center}
+.ph.split .me{width:clamp(180px,20cqi,260px);transform:none}
+
+/* Sections */
+.sec{padding-block:clamp(48px,8cqi,96px)}
+.sh{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 16px;margin-bottom:28px}
+.site h2{font:600 clamp(28px,4cqi,44px)/1.05 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:0;text-wrap:balance}
+
+/* Cards (home only) */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.4cqi,24px)}
+.card{display:block;background:var(--white);border-radius:20px;padding:clamp(20px,3cqi,30px);box-shadow:0 1px 0 var(--rule),0 18px 40px -26px rgba(20,38,27,.35);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 var(--rule),0 28px 50px -26px rgba(20,38,27,.45)}
+.card h3{font:600 clamp(20px,2.3cqi,24px)/1.15 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:14px 0 10px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card p+p{margin-top:10px}
+.cards.pj{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card.wide{grid-column:1/-1}.card.wide p{max-width:66ch}
+.flow{display:grid;grid-template-columns:minmax(0,1.59fr) minmax(0,1.9fr) minmax(0,.8fr);gap:18px;margin-top:24px;align-items:start}
+.flow figure{margin:0;min-width:0}
+.flow img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 0 0 1px var(--rule)}
+.flow figcaption{margin-top:10px;font-size:14px;line-height:1.5;color:var(--muted)}
+.flow figcaption .mono{display:block;margin-bottom:2px;color:var(--leaf)}
+.flow figcaption a{color:var(--leaf);text-decoration:underline;text-underline-offset:3px}
+@container (max-width:720px){.flow figure:last-child img{max-width:320px}}
+
+/* Featured post panel (home) */
+.art{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-radius:24px;overflow:hidden;background:var(--forest);color:#fff}
+.art .t{padding:clamp(24px,5cqi,56px)}
+.art .mono{color:var(--blush)}
+.art h3{font:600 clamp(26px,3.4cqi,40px)/1.08 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:14px 0 16px;text-wrap:balance}
+.art p{color:rgba(255,255,255,.75);margin:0 0 24px}
+.art .v{position:relative;min-height:260px;background:url(assets/bg-foliage.jpg) center/cover}
+.art .v div{position:absolute;inset:auto 24px 24px 24px;background:rgba(20,38,27,.84);border-radius:14px;padding:16px 18px}
+.art .v strong{display:block;font:700 clamp(40px,6cqi,64px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.art .v span{font-size:14px;color:rgba(255,255,255,.78)}
+
+/* Rows: work list, timeline, contact */
+.rows{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,2fr) minmax(0,.9fr);gap:clamp(12px,3cqi,32px);padding-block:clamp(22px,3cqi,32px);border-bottom:1px solid var(--rule);align-items:baseline}
+.row h3{font:600 clamp(21px,2.6cqi,28px)/1.15 "Bricolage Grotesque",sans-serif;letter-spacing:-.025em;margin:0 0 8px}
+.row p{margin:0;color:var(--muted);max-width:56ch}
+.row .end{display:grid;gap:8px;justify-items:start}
+a.row{transition:background .2s}
+a.row:hover h3{color:var(--leaf)}
+
+/* Facts strip (case study) */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:0;padding-block:24px;border-bottom:1px solid var(--rule)}
+.facts dt{font:12.5px "IBM Plex Mono",monospace;color:var(--muted);margin-bottom:6px}
+.facts dd{margin:0;font-weight:600;line-height:1.35}
+.facts.nums dd{font:600 clamp(28px,4cqi,44px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+
+/* Long-form reading */
+.prose{max-width:66ch;margin-inline:auto;font-size:18px;line-height:1.72}
+.prose>*{margin-block:0}
+.prose>*+*{margin-top:1.05em}
+.prose h2{font-size:clamp(26px,3.2cqi,32px);margin-top:1.9em}
+.prose a{color:var(--leaf);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.prose strong{font-weight:600}
+.prose pre{background:var(--forest);color:var(--mint);border-radius:12px;padding:18px 20px;overflow-x:auto;font:14px/1.6 "IBM Plex Mono",monospace}
+.prose ol.steps{list-style:none;padding:0;display:grid;gap:18px;counter-reset:s}
+.prose ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 12px}
+.prose ol.steps li::before{content:counter(s);font:600 30px/1 "Bricolage Grotesque",sans-serif;color:var(--leaf);padding-top:2px}
+.fig{margin:2.2em auto;max-width:860px}
+.fig img{width:100%;border-radius:12px;box-shadow:0 0 0 1px var(--rule),0 18px 40px -30px rgba(20,38,27,.5)}
+.fig.tall{max-width:640px}.fig.phone{max-width:420px}
+.fig figcaption{font-size:15px;line-height:1.5;color:var(--muted);margin-top:12px;max-width:60ch}
+.pair{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:24px;align-items:start;max-width:960px;margin:2.4em auto}
+.pair .fig{margin:0;max-width:none}
+.prose-wrap{padding-block:clamp(40px,7cqi,80px)}
+.ahead{max-width:66ch;margin-inline:auto}
+.ahead h1{font:600 clamp(34px,5cqi,56px)/1.06 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:12px 0 0;text-wrap:balance}
+.aend{max-width:66ch;margin:56px auto 0;padding-top:24px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+
+/* Blog list */
+.post{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(20px,4cqi,48px);align-items:center}
+.post img{border-radius:16px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.post h3{font:600 clamp(24px,3.2cqi,36px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:10px 0 12px;text-wrap:balance}
+.post p{margin:0 0 20px;color:var(--muted)}
+
+/* About me and skills */
+.bio{max-width:62ch;font-size:18px;line-height:1.7}
+.bio p{margin:0}.bio p+p{margin-top:1em}
+.tools{columns:2;gap:32px;padding:0;margin:0;list-style:none;font-size:16px}
+.tools li{padding-block:8px;border-bottom:1px solid var(--rule);break-inside:avoid}
+
+/* Find me */
+.big{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding-block:clamp(24px,4cqi,40px);border-bottom:1px solid var(--rule)}
+.big h3{font:600 clamp(28px,4.6cqi,52px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:0 0 8px}
+.big .mono{overflow-wrap:anywhere}
+.big:hover h3{color:var(--leaf)}
+.arrow{font:400 clamp(28px,4cqi,44px)/1 "Bricolage Grotesque",sans-serif;color:var(--leaf)}
+
+/* Footer, shared */
+.foot{background:var(--forest);color:#fff;margin-top:clamp(48px,8cqi,96px)}
+.foot .w{padding-block:clamp(36px,5cqi,56px) 28px}
+.foot .a{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.14)}
+.foot h2{color:#fff}
+.foot .b{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 20px;padding-top:20px;font-size:14px;color:rgba(255,255,255,.65)}
+.foot .b span:last-child{display:flex;gap:18px}
+.foot .b a:hover{color:#fff}
+
+/* Work groups: one per employer or client, with its logo */
+.grp{display:flex;align-items:center;flex-wrap:wrap;gap:10px 16px;padding-block:clamp(40px,6cqi,64px) 18px}
+.grp:first-child{padding-top:0}
+.grp img{height:34px;width:auto}
+.grp img.wm{height:18px}
+.grp h2,.grp h3{font:600 clamp(22px,2.8cqi,30px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0;color:var(--forest)}
+/* Experience: one block per job */
+.job{padding-block:clamp(28px,4cqi,44px);border-top:1px solid var(--rule)}
+.job .grp{padding-block:0 6px}
+.job .role{margin:0 0 10px;font-weight:600;color:var(--leaf)}
+.job .sum{margin:0 0 14px;max-width:66ch}
+.hl{margin:0 0 16px;padding:0;list-style:none;max-width:66ch;display:grid;gap:10px}
+.hl li{position:relative;padding-left:20px;color:var(--muted)}
+.hl li::before{content:"";position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:2px;background:var(--leaf)}
+.hl .tl{white-space:nowrap}
+.job .stack{margin:0}
+div.card:hover{transform:none;box-shadow:0 1px 0 var(--rule),0 18px 40px -26px rgba(20,38,27,.35)}
+.card .tl{display:inline-block;margin-top:14px}
+.grp .mono{margin-left:auto}
+.card .lg{height:26px;width:auto;margin-bottom:14px}
+
+
+.tw{overflow-x:auto}
+
+@container (max-width:720px){
+  .hero .grid,.cards,.cards.pj,.flow,.art,.row,.post,.pair,.ph.split .in{grid-template-columns:minmax(0,1fr)}
+  .grp .mono{margin-left:0;flex-basis:100%}
+  .hero .grid{padding-top:8px}
+  .me,.ph.split .me{order:-1;justify-self:start!important;width:170px;margin-left:-14px}
+  .nl a:nth-child(2),.nl a:nth-child(3){display:none}
+  .row{gap:6px}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tools{columns:1}
+  .prose{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){.site *{transition:none!important;transform:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site">
+<main id="main">
+  <div class="hero" data-tilt>
+    <div class="bg" aria-hidden="true"></div>
+    <nav class="nav" aria-label="Main"><div class="w"><a class="logo" href="./">Emmanuel Obot</a><span class="nl"><a href="#experience" data-n="experience">Experience</a><a href="#projects" data-n="projects">Projects</a><a href="blog/" data-n="blog">Blog</a></span></div></nav>
+    <div class="w grid">
+      <div class="txt">
+        <h1>Hi, I’m Emmanuel.</h1>
+        <p class="lead">I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. I also look after the systems at Amela Pharmacy, and I’m building PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.</p>
+        <div class="acts"><a class="btn" href="#experience">See my experience</a><a class="btn ghost" href="blog/">Read my blog</a></div>
+      </div>
+      <figure class="me"><img src="assets/portrait.webp" width="1254" height="1254" alt="Emmanuel Obot, smiling, in a navy waistcoat and pink tie"></figure>
+    </div>
+  </div>
+
+  <div class="w sec" id="about-me">
+    <div class="sh"><h2>About me</h2></div>
+    <div class="bio">
+      <p>Java is the language I know best, mostly with Spring Boot. These days I also write a lot of Python for ERPNext, some TypeScript, and Windows apps in C# and .NET.</p>
+      <p>On my own projects I decide what gets built and review it, and AI coding agents write much of the code. Nothing merges without tests and a review.</p>
+      <p>I studied Mechatronics Engineering at the University of Manchester, with a year at Mercedes-AMG High Performance Powertrains in the middle.</p>
+    </div>
+  </div>
+
+  <div class="w" id="experience">
+    <div class="sh"><h2>Experience</h2></div>
+    <div class="job">
+      <div class="grp"><img src="assets/logos/lexisnexis-risk-solutions.webp" width="145" height="34" alt="LexisNexis Risk Solutions"><h3>LexisNexis Risk Solutions</h3><span class="mono">Oct 2026 – now · contract</span></div>
+      <p class="role">Full-Stack Java Software Engineer</p>
+      <p class="sum">A contract role on a product team. Most of my work is on the backend, and I take features from the first idea through to production with product managers, designers and QA.</p>
+      <ul class="hl">
+        <li>Design, build and test backend services and APIs in Java 21, and the Angular screens that use them.</li>
+        <li>Work spec first. Each feature starts as a written spec the team agrees on, and the code and tests follow from it.</li>
+        <li>Use AI-DLC, the AI-Driven Development Life Cycle from AWS. The AI drafts the plan, design and code in stages, asks questions where things are unclear, and an engineer checks and approves each stage before the next one starts.</li>
+        <li>Keep quality up with automated tests, code reviews and monitoring, and help other engineers through reviews and feedback.</li>
+        <li>Take part in decisions on architecture and on how the team builds and ships its software.</li>
+      </ul>
+      <p class="mono stack">Java 21 · Angular · AI-DLC · spec-driven development</p>
+    </div>
+
+    <div class="job">
+      <div class="grp"><img src="assets/logos/amela-mark.svg" width="34" height="34" alt=""><h3>Amela Pharmacy</h3><span class="mono">Oct 2024 – now</span></div>
+      <p class="role">Platform Owner</p>
+      <p class="sum">I look after AmelaStock, the ERPNext system the pharmacy runs on: stock, the online shop, HR and attendance. I’m also building its till app, AmelaStockPOS.</p>
+      <ul class="hl">
+        <li>Built Product Intake, a workflow on top of ERPNext that uses AI to add products to the inventory from two photos of a pack. It cut the time to add a product from 30–45 minutes to about five, has added about 3,500 products, and staff still use it for new stock. <a class="tl" href="product-intake/">Read the write-up →</a></li>
+        <li>Built Blogbot and the Health Observance calendar, AI pipelines that write the pharmacy’s blog articles and health-day posts, with sourced claims, a second AI reviewer, and my approval for sensitive topics. <a class="tl" href="#blogbot">See how it works →</a></li>
+        <li>Ship changes as Docker image releases: 156 since March 2026.</li>
+        <li>Connected fingerprint clocks to ERPNext, with alerts for late arrivals and missed shifts. In October I fixed a gap in the attendance records, linking 263 check-ins without duplicates.</li>
+        <li>Set up the staff email accounts and built small tools to manage them.</li>
+        <li>Fixed how Google finds amelapharmacy.com, with one main address, a working robots.txt and a clean sitemap. Redesigned the site in November 2026.</li>
+        <li>Building AmelaStockPOS, a Windows till app that keeps working without the internet and syncs sales to AmelaStock without counting one twice.</li>
+      </ul>
+      <p class="mono stack">Python · Frappe · ERPNext · Docker · C# · .NET · WinUI 3 · SQLite</p>
+    </div>
+    <div class="job">
+      <div class="grp"><img src="assets/logos/psy-metal-alloy.svg" width="71" height="34" alt=""><h3>PSY Metal &amp; Alloy</h3><span class="mono">June 2026 – now · client</span></div>
+      <p class="role">Product owner and developer, PSY Forge</p>
+      <p class="sum">PSY Metal &amp; Alloy makes aluminium and zinc alloy ingots in Coimbatore, India. PSY Forge is the ERP I built to run their operations. It’s a private system for their team.</p>
+      <ul class="hl">
+        <li>Follows each batch from buying scrap and checking its quality, through sorting, furnace melts and chemistry tests, to finished ingots, sales and dispatch.</li>
+        <li>Built as a Frappe and ERPNext app, after the client approved the designs in June 2026.</li>
+        <li>I set what gets built and review it. Codex and Claude agents write most of the code.</li>
+      </ul>
+      <p class="mono stack">Python · Frappe · ERPNext · Docker · <a class="tl" href="https://psymetalandalloy.com/" target="_blank" rel="noopener">psymetalandalloy.com ↗</a></p>
+    </div>
+    <div class="job">
+      <div class="grp"><img src="assets/logos/thg-ingenuity-mark.svg" width="34" height="34" alt=""><h3>THG Ingenuity</h3><span class="mono">Sept 2021 – June 2026</span></div>
+      <p class="role">Software Engineer</p>
+      <p class="sum">Nearly five years on the services behind THG’s online shops, mostly in Java and Spring Boot, with TypeScript and Angular too. In my last years there I brought AI into some of them.</p>
+      <ul class="hl">
+        <li>Built Java and Spring Boot services for reviews, moderation, navigation, accounts and checking that a reviewer bought the item, connected through REST, GraphQL and ActiveMQ.</li>
+        <li>Added AI-written review summaries, and questions and answers drawn from reviews, to the Java and GraphQL services the shops use.</li>
+        <li>Moved some shops’ review moderation from old classifiers and filters to an AI-assisted check. Reviews it was unsure about still went to people.</li>
+        <li>Built and deployed E-Bot, a Teams assistant for support questions. It searched the code, past logs and read-only service checks, and used an MCP service to find which team owned the problem. It went into full use with one team, then grew to cover wider engineering support.</li>
+        <li>Built a video service in TypeScript and NestJS, with REST endpoints, OpenAPI docs and unit and end-to-end tests, and Angular admin tools to go with it.</li>
+        <li>Upgraded services to Java 21 and Spring Boot 3 and helped move them to Google Cloud and Kubernetes. Looked into incidents across code, pods, logs, databases and other teams’ APIs.</li>
+      </ul>
+      <p class="mono stack">Java · Spring Boot · GraphQL · ActiveMQ · TypeScript · NestJS · Angular · GKE · MCP</p>
+    </div>
+    <div class="job">
+      <div class="grp"><img class="wm" src="assets/logos/mercedes-amg-hpp.webp" width="158" height="18" alt="Mercedes-AMG High Performance Powertrains"><h3>Mercedes-AMG HPP</h3><span class="mono">Sept 2019 – Sept 2020 · placement · Brixworth</span></div>
+      <p class="role">Software and Controls Placement</p>
+      <p class="sum">My year in industry during my degree, at HPP in Brixworth, where Mercedes builds its Formula 1 power units. I worked on their control software.</p>
+      <ul class="hl">
+        <li>Wrote power-unit control software in C and MATLAB/Simulink, using Vector CAN tools, ATLAS telemetry and ECU workflows.</li>
+        <li>Built FlexRay communication over two channels, with protection if one channel fails, and a SENT driver for pressure and temperature sensors.</li>
+        <li>Worked to the MISRA C 2012 coding standard for safety-critical software.</li>
+      </ul>
+      <p class="mono stack">C · MATLAB/Simulink · Vector CAN · ATLAS · FlexRay · MISRA C</p>
+    </div>
+    <div class="job">
+      <div class="grp"><h3>University of Manchester</h3><span class="mono">Sept 2016 – July 2021</span></div>
+      <p class="role">MEng Mechatronics Engineering with a year in industry, First Class Honours</p>
+    </div>
+  </div>
+
+  <div class="w sec" id="projects">
+    <div class="sh"><h2>Projects</h2></div>
+    <div class="cards pj">
+      <a class="card wide" href="product-intake/"><img class="lg" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>Product Intake</h3><p>A workflow on top of ERPNext that uses AI to add products to the pharmacy’s inventory. Staff photograph the front and back of a pack. It reads the photos and barcode, checks them against 11,495 old stock records, and drafts the product record with a clean catalogue photo. A person checks each draft before it’s saved.</p><p>It cut the time to add a product from 30–45 minutes to about five. It has added about 3,500 products, 95% of the stock the pharmacy kept, and staff still use it to add new products today.</p><span class="tl">Read the write-up →</span></a>
+      <div class="card wide" id="blogbot"><img class="lg" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>Blogbot and the Health Observance calendar</h3><p>Two AI pipelines that write Amela Pharmacy’s health posts. Blogbot picks a topic from what people search for, researches it and writes an article for the pharmacy’s blog. The Health Observance calendar holds the year’s health days, such as World Lung Cancer Day, each with a link to its official source. Both feed one step that makes a poster and a caption for Facebook, Instagram and LinkedIn.</p><p>Most of the work goes into keeping the posts accurate. Each medical claim must come from a source the AI opened, and code checks the links and dates. A second AI reviews each article and caption and can send it back for fixes. The photos are made with no words in them. Code adds the text and logo, then an AI check looks for mistakes such as odd hands. Sensitive topics wait for my approval by email, and a log stops anything going out twice.</p>
+        <div class="flow">
+          <figure><img loading="lazy" decoding="async" src="assets/posts/observance-calendar.webp" width="1044" height="658" loading="lazy" alt="The Health Observance Calendar in AmelaStock for November 2026, with health days, weeks and months on it."><figcaption><span class="mono">1 · The calendar</span>The calendar in AmelaStock. It holds 167 health days, weeks and months for 2026.</figcaption></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/posts/lung-cancer-facebook.webp" width="1200" height="630" loading="lazy" alt="Amela Pharmacy poster for World Lung Cancer Day: a woman waits on a bench outside a pharmacy. Text: Ask clearer questions about screening and prevention."><figcaption><span class="mono">2 · A health-day poster</span>Made for World Lung Cancer Day and <a href="https://www.facebook.com/1626636256134888/posts/1721586456639867" target="_blank" rel="noopener">posted to Facebook</a> on 1 August. The photo is AI-made; code adds the words and logo.</figcaption></figure>
+          <figure><img loading="lazy" decoding="async" src="assets/posts/fertility-instagram.webp" width="720" height="900" loading="lazy" alt="Amela Pharmacy Instagram poster for the article Your First Fertility Appointment: What Both Partners Can Prepare."><figcaption><span class="mono">3 · An article, shared</span>A Blogbot <a href="https://amelapharmacy.com/blog/medication-safety-pharmacy-tips/your-first-fertility-appointment-what-both-partners-can-prepare" target="_blank" rel="noopener">article</a>, posted on 11 November to <a href="https://www.instagram.com/p/DflXY_ZCmww/" target="_blank" rel="noopener">Instagram</a>, <a href="https://www.facebook.com/1626636256134888/posts/1834799885318523" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.linkedin.com/feed/update/urn:li:share:7526102512781889536/" target="_blank" rel="noopener">LinkedIn</a>.</figcaption></figure>
+        </div>
+      </div>
+      <div class="card"><img class="lg" src="assets/logos/psy-forge.webp" width="144" height="36" alt="PSY Forge" style="height:36px;margin:-5px 0 9px -6px"><span class="mono">PSY Metal &amp; Alloy · 2026</span><h3>PSY Forge</h3><p>The ERP I built for an aluminium and zinc alloy maker in India, from buying scrap to selling ingots. It’s a private system for their team.</p></div>
+      <div class="card"><img class="lg" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>AmelaStockPOS</h3><p>Amela Pharmacy’s Windows till app. It keeps working when the internet drops, then syncs sales to AmelaStock without counting one twice.</p></div>
+    </div>
+  </div>
+
+  <div class="w" id="skills">
+    <div class="sh"><h2>Skills</h2></div>
+    <ul class="tools">
+      <li>Java and Spring Boot</li><li>Python, Frappe and ERPNext</li><li>TypeScript, NestJS and Angular</li><li>C#, .NET and WinUI 3</li><li>GraphQL</li><li>SQL</li><li>Docker and Kubernetes</li><li>Google Cloud</li><li>n8n</li><li>Codex and Claude coding agents</li><li>Spec-driven development with AI-DLC</li>
+    </ul>
+  </div>
+
+  <div class="w" style="padding-top:clamp(48px,8cqi,96px)"><div class="art">
+    <div class="t"><span class="mono">From my blog · 4 September 2026</span><h3>I Had 11,000 Messy Legacy Inventory Rows. Making Sense of Them Became an ERPNext Workflow</h3><p>What I did with thousands of messy rows from an old stock list, and how that turned into a workflow in ERPNext.</p><a class="btn" href="blog/11000-messy-inventory-rows/">Read it</a></div>
+    <div class="v"><div><strong>11,495</strong><span>old barcode and price records recovered</span></div></div>
+  </div></div>
+
+  <div class="w sec" id="find-me" style="padding-bottom:0">
+    <div class="sh"><h2>Find me</h2></div>
+    <div class="rows" style="border-top:0">
+      <a class="big" href="https://www.linkedin.com/in/unwana-emmanuel-obot-2bab0b9a/" target="_blank" rel="noopener"><div><h3>LinkedIn</h3><span class="mono">linkedin.com/in/unwana-emmanuel-obot-2bab0b9a</span></div><span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="big" href="https://github.com/RobotChicken97" target="_blank" rel="noopener"><div><h3>GitHub</h3><span class="mono">github.com/RobotChicken97</span></div><span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</main>
+<footer class="foot"><div class="w">
+  <div class="a"><h2>Get in touch</h2><div class="acts" style="margin:0"><a class="btn" href="https://www.linkedin.com/in/unwana-emmanuel-obot-2bab0b9a/" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="https://github.com/RobotChicken97" target="_blank" rel="noopener">GitHub</a></div></div>
+  <div class="b"><span>Emmanuel Obot · Manchester</span><span><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="blog/">Blog</a><a href="#find-me">Find me</a></span></div>
+</div></footer>
+</div>
+<script>
+(function(){
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var el=document.querySelector('[data-tilt]');if(!el)return;
+  el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();
+    el.style.setProperty('--px',((e.clientX-r.left)/r.width*2-1).toFixed(3));
+    el.style.setProperty('--py',((e.clientY-r.top)/r.height*2-1).toFixed(3));});
+  el.addEventListener('pointerleave',function(){el.style.setProperty('--px',0);el.style.setProperty('--py',0)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" width="768" height="768" role="img" aria-label="Amela Pharmacy mark">
+  <!-- Amela mark, flat vector. Traced 2026-10-24 from amela-live-logo.webp (768x768 raster): pixels classified by hue, four connected components, each reduced to its three convex-hull extreme points. Fill colours are the system tokens red-500 #ee2d3d and navy-700 #23436f. Owner approved flat logo everywhere, 2026-10-27 (Q02). -->
+  <path id="top" d="M72.0 417.1L333.6 106.3L205.6 463.1Z" fill="#ee2d3d"/>
+  <path id="right" d="M364.0 73.5L691.4 311.4L323.6 193.6Z" fill="#23436f"/>
+  <path id="bottom" d="M579.7 287.8L693.6 334.9L431.8 679.9Z" fill="#ee2d3d"/>
+  <path id="left" d="M86.3 441.3L459.9 571.9L402.6 698.2Z" fill="#23436f"/>
+</svg>
