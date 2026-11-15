@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" data-mode="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<script>try{if(localStorage.getItem('eo-mode')==='light')document.documentElement.setAttribute('data-mode','light')}catch(e){}</script>
+<script>(function(r){try{if(localStorage.getItem('eo-mode')==='dark'){r.removeAttribute('data-mode');return}}catch(e){}r.setAttribute('data-mode','light')})(document.documentElement)</script>
 <title>Emmanuel Obot · Software engineer in Manchester</title>
-<meta name="description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy and built PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
+<meta name="description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy. Until June 2026 I was at THG. I write a blog called Platform Notes.">
 <link rel="canonical" href="https://emmanuel-obot.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Emmanuel Obot">
 <meta property="og:title" content="Emmanuel Obot · Software engineer in Manchester">
-<meta property="og:description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy and built PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.">
+<meta property="og:description" content="I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy. Until June 2026 I was at THG. I write a blog called Platform Notes.">
 <meta property="og:url" content="https://emmanuel-obot.com/">
 <meta property="og:image" content="https://emmanuel-obot.com/assets/og.jpg">
 <meta name="twitter:card" content="summary">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600;12..96,700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>*{box-sizing:border-box}html{background:#09110C;scroll-padding-top:12px}body{margin:0;background:#0E1912;color-scheme:dark}[hidden]{display:none!important}:focus-visible{outline:2px solid #B9D3B0;outline-offset:3px}.nav :focus-visible,.hero :focus-visible,.ph :focus-visible,.foot :focus-visible,.art :focus-visible{outline-color:#F0CFD8}.skip{position:absolute;left:12px;top:-60px;z-index:9;background:#fff;color:#14261B;padding:10px 14px;border-radius:10px;font:600 15px/1 "Bricolage Grotesque",system-ui,sans-serif}.skip:focus{top:12px}.site{min-height:100vh;display:flex;flex-direction:column}.site>main{flex:1}html[data-mode=light]{background:#14261B}html[data-mode=light] body{background:#F3F6F0;color-scheme:light}html[data-mode=light] :focus-visible{outline-color:#2E4A2C}
-/* ---------- The site: dark by default, light when the visitor picks it (data-mode on <html>) ---------- */
+/* ---------- The site: light by default (data-mode="light" on <html>), dark when the visitor picks it ---------- */
 .site{--ground:#0E1912;--panel:#15241A;--forest:#14261B;--deep:#09110C;--ink:#E9EFE6;--leaf:#B9D3B0;--mint:#F3F6F0;--muted:#A2B3A6;--rule:#2A3F31;--blush:#F0CFD8;--white:#FFFFFF;
   --edge:inset 0 0 0 1px var(--rule);--edge-hi:inset 0 0 0 1px rgba(185,211,176,.35);--line-edge:rgba(233,239,230,.45);--art-edge:var(--rule);--sh:rgba(0,0,0,.6);--sh-hi:rgba(0,0,0,.7);
   color-scheme:dark;container-type:inline-size;overflow:hidden;background:var(--ground);color:var(--ink);font:400 16px/1.65 "Bricolage Grotesque",system-ui,sans-serif}
@@ -144,6 +144,54 @@ a.row:hover h3{color:var(--leaf)}
 .fig figcaption{font-size:15px;line-height:1.5;color:var(--muted);margin-top:12px;max-width:60ch}
 .pair{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1fr);gap:24px;align-items:start;max-width:960px;margin:2.4em auto}
 .pair .fig{margin:0;max-width:none}
+.prose code{font:.84em/1 "IBM Plex Mono",monospace;background:color-mix(in srgb,var(--leaf) 12%,transparent);padding:.15em .35em;border-radius:5px;overflow-wrap:anywhere}
+.prose pre code{background:none;padding:0;font:inherit}
+.fig .zoom{display:block}
+.prose .bleed{width:min(920px,100cqi - 32px);margin-left:calc(50% - min(460px,50cqi - 16px));max-width:none}
+.pair.even{grid-template-columns:repeat(2,minmax(0,1fr))}
+.duo .pair{margin:0;max-width:none}.duo figure{margin:0;display:grid;gap:8px;min-width:0}.duo .mono{color:var(--ink);font-weight:500}
+/* E-Bot flow: a U shape when wide (four across, then Codex and the reply back along the bottom), a stack when narrow */
+.fd{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 30px}
+.fd>li{position:relative;background:var(--panel);border-radius:12px;box-shadow:0 0 0 1px var(--rule);padding:14px 16px;display:grid;align-content:start;gap:6px;min-width:0}
+.fd>li:nth-child(5){grid-column:2/span 3;grid-row:2}.fd>li:nth-child(6){grid-column:1;grid-row:2}
+.fd>li+li::before{content:"→";position:absolute;left:-24px;top:50%;transform:translateY(-50%);color:var(--leaf);font:600 19px/1 "Bricolage Grotesque",sans-serif}
+.fd>li:nth-child(5)::before{content:"↓";left:auto;top:-29px;right:calc((100% - 60px)/6);transform:translateX(50%)}
+.fd>li:nth-child(6)::before{content:"←";left:auto;right:-25px}
+.fd b{font:600 15px/1.25 "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.fd span,.fd ol{font-size:14px;line-height:1.45;color:var(--muted)}
+.fd ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.fd ol li{padding-left:16px;border-left:1px solid var(--rule)}.fd ol li:first-child{padding-left:0;border-left:0}
+.fd em{font-style:normal;font-weight:600;color:var(--ink)}
+.fd .fd-codex{box-shadow:0 0 0 1.5px var(--leaf)}
+@container (max-width:900px){.fd-fig.bleed{width:auto;margin-left:auto;max-width:560px}.fd{grid-template-columns:minmax(0,1fr)}
+  .fd>li:nth-child(n){grid-column:auto;grid-row:auto}
+  .fd>li:nth-child(n+2)::before{content:"↓";left:50%;right:auto;top:-28px;transform:translateX(-50%)}
+  .fd ol{grid-template-columns:minmax(0,1fr);gap:8px}.fd ol li:nth-child(n){padding:8px 0 0;border-left:0;border-top:1px solid var(--rule)}}
+/* AGENTS.md size chart */
+.kb,.thumb{--s1:#3F8A4C;--s2:#D9507E;--s3:#4A8BE0}
+:root[data-mode="light"] .kb,:root[data-mode="light"] .thumb{--s1:#2E6B3A;--s2:#B5476B;--s3:#2F6DB5}
+.kb-box{background:var(--panel);border-radius:12px;box-shadow:0 0 0 1px var(--rule);padding:16px 16px 8px}
+.kb-legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;line-height:1.4;color:var(--ink);margin:0 0 4px 4px}
+.kb-legend i,.kb-tip i{display:inline-block;flex:none;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:7px}
+.kb-plot{position:relative}
+.kb svg{display:block;width:100%;height:auto;touch-action:pan-y;overflow:visible}
+.kb .kb-narrow{display:none}
+.kb-grid{stroke:var(--rule);stroke-width:1}.kb-base,.kb-tick{stroke:var(--muted);stroke-opacity:.5}
+.kb-ax{fill:var(--muted);font-family:"IBM Plex Mono",monospace}
+.kb-note{fill:var(--muted);font-family:"Bricolage Grotesque",sans-serif}
+.kb-cut{stroke:var(--muted);stroke-opacity:.5;stroke-dasharray:3 4}
+.kb-line{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.kb-lab{fill:var(--ink);font-family:"Bricolage Grotesque",sans-serif;font-weight:600}.kb-val{fill:var(--muted);font-weight:400}
+.kb-cross{stroke:var(--muted);stroke-width:1}.kb-hover circle{stroke:var(--panel);stroke-width:2}.kb-hit{fill:transparent}
+.kb-tip{position:absolute;top:30px;z-index:2;pointer-events:none;background:var(--panel);color:var(--ink);border-radius:10px;box-shadow:0 0 0 1px var(--rule),0 12px 30px -16px var(--sh-hi);padding:10px 12px;font-size:13.5px;line-height:1.55;min-width:190px}
+.kb-tip span{display:block;font:12px "IBM Plex Mono",monospace;color:var(--muted);margin-bottom:2px}
+.kb-tip div{display:flex;align-items:center}.kb-tip b{margin-left:auto;padding-left:14px;font-weight:600}
+.kb-table{margin-top:14px;font-size:15px}.kb-table summary{cursor:pointer;color:var(--leaf);font-weight:600}
+.kb-table table{border-collapse:collapse;width:100%;margin-top:12px;font-size:14px;font-variant-numeric:tabular-nums}
+.kb-table th,.kb-table td{padding:7px 0 7px 14px;border-bottom:1px solid var(--rule);text-align:right;white-space:nowrap}
+.kb-table th:first-child{text-align:left;padding-left:0}.kb-table thead th{color:var(--muted);font-weight:600}
+.kb-table p{color:var(--muted);font-size:14px;margin:10px 0 0}
+@container (max-width:640px){.kb .kb-wide{display:none}.kb .kb-narrow{display:block}.kb-box{padding:12px 8px 4px}}
 .prose-wrap{padding-block:clamp(40px,7cqi,80px)}
 .ahead{max-width:66ch;margin-inline:auto}
 .ahead h1{font:600 clamp(34px,5cqi,56px)/1.06 "Bricolage Grotesque",sans-serif;letter-spacing:-.035em;margin:12px 0 0;text-wrap:balance}
@@ -154,6 +202,10 @@ a.row:hover h3{color:var(--leaf)}
 .post img{border-radius:16px;aspect-ratio:3/2;object-fit:cover;width:100%}
 .post h3{font:600 clamp(24px,3.2cqi,36px)/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:10px 0 12px;text-wrap:balance}
 .post p{margin:0 0 20px;color:var(--muted)}
+.post+.post{margin-top:clamp(40px,6cqi,64px)}
+.post .thumb{border-radius:16px;aspect-ratio:3/2;width:100%;background:var(--panel);box-shadow:0 0 0 1px var(--rule);overflow:hidden}
+.thumb-svg{display:block;width:100%;height:100%}
+.fthumb rect{fill:var(--ground);stroke:var(--rule)}.fthumb .c{stroke:var(--leaf)}.fthumb text{fill:var(--ink);font:500 13px "Bricolage Grotesque",sans-serif}.fthumb path{fill:none;stroke:var(--leaf);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 
 /* About me and skills */
 .bio{max-width:62ch;font-size:18px;line-height:1.7}
@@ -203,7 +255,7 @@ div.card:hover{transform:none;box-shadow:var(--edge),0 18px 40px -26px var(--sh)
 .tw{overflow-x:auto}
 
 @container (max-width:720px){
-  .hero .grid,.cards,.cards.pj,.flow,.art,.row,.post,.pair,.ph.split .in{grid-template-columns:minmax(0,1fr)}
+  .hero .grid,.cards,.cards.pj,.flow,.art,.row,.post,.pair,.pair.even,.ph.split .in{grid-template-columns:minmax(0,1fr)}
   .grp .mono{margin-left:0;flex-basis:100%}
   .hero .grid{padding-top:8px}
   .me,.ph.split .me{order:-1;justify-self:start!important;width:170px;margin-left:-14px}
@@ -226,7 +278,7 @@ div.card:hover{transform:none;box-shadow:var(--edge),0 18px 40px -26px var(--sh)
     <div class="w grid">
       <div class="txt">
         <h1>Hi, I’m Emmanuel.</h1>
-        <p class="lead">I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy and built PSY Forge, the ERP for PSY Metal &amp; Alloy, an alloy maker in India. Until June 2026 I was at THG. I write a blog called Platform Notes.</p>
+        <p class="lead">I’m a software engineer in Manchester, contracting at LexisNexis Risk Solutions as a full-stack Java engineer. Before that I looked after the systems at Amela Pharmacy. Until June 2026 I was at THG. I write a blog called Platform Notes.</p>
         <div class="acts"><a class="btn" href="#experience">See my experience</a><a class="btn ghost" href="blog/">Read my blog</a></div>
       </div>
       <figure class="me"><img src="assets/portrait.webp" width="1254" height="1254" alt="Emmanuel Obot, smiling, in a navy waistcoat and pink tie"></figure>
@@ -273,17 +325,7 @@ div.card:hover{transform:none;box-shadow:var(--edge),0 18px 40px -26px var(--sh)
       </ul>
       <p class="mono stack">Python · Frappe · ERPNext · Docker · C# · .NET · WinUI 3 · SQLite</p>
     </div>
-    <div class="job">
-      <div class="grp"><img class="dm" src="assets/logos/themed/psy-metal-alloy-dark.svg" width="71" height="34" alt=""><img class="lm" src="assets/logos/psy-metal-alloy.svg" width="71" height="34" alt=""><h3>PSY Metal &amp; Alloy</h3><span class="mono">June 2026 – Oct 2026 · client</span></div>
-      <p class="role">Product owner and developer, PSY Forge</p>
-      <p class="sum">PSY Metal &amp; Alloy makes aluminium and zinc alloy ingots in Coimbatore, India. PSY Forge is the ERP I built to run their operations. It’s a private system for their team.</p>
-      <ul class="hl">
-        <li>Follows each batch from buying scrap and checking its quality, through sorting, furnace melts and chemistry tests, to finished ingots, sales and dispatch.</li>
-        <li>Built as a Frappe and ERPNext app, after the client approved the designs in June 2026.</li>
-        <li>I set what got built and reviewed it. Codex and Claude agents wrote most of the code.</li>
-      </ul>
-      <p class="mono stack">Python · Frappe · ERPNext · Docker · <a class="tl" href="https://psymetalandalloy.com/" target="_blank" rel="noopener">psymetalandalloy.com ↗</a></p>
-    </div>
+    
     <div class="job">
       <div class="grp"><img class="dm" src="assets/logos/themed/thg-ingenuity-mark-dark.svg" width="34" height="34" alt=""><img class="lm" src="assets/logos/thg-ingenuity-mark.svg" width="34" height="34" alt=""><h3>THG Ingenuity</h3><span class="mono">Sept 2021 – June 2026</span></div>
       <p class="role">Software Engineer</p>
@@ -326,8 +368,8 @@ div.card:hover{transform:none;box-shadow:var(--edge),0 18px 40px -26px var(--sh)
           <figure><img loading="lazy" decoding="async" src="assets/posts/fertility-instagram.webp" width="720" height="900" loading="lazy" alt="Amela Pharmacy Instagram poster for the article Your First Fertility Appointment: What Both Partners Can Prepare."><figcaption><span class="mono">3 · An article, shared</span>A Blogbot <a href="https://amelapharmacy.com/blog/medication-safety-pharmacy-tips/your-first-fertility-appointment-what-both-partners-can-prepare" target="_blank" rel="noopener">article</a>, posted on 11 November to <a href="https://www.instagram.com/p/DflXY_ZCmww/" target="_blank" rel="noopener">Instagram</a>, <a href="https://www.facebook.com/1626636256134888/posts/1834799885318523" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.linkedin.com/feed/update/urn:li:share:7526102512781889536/" target="_blank" rel="noopener">LinkedIn</a>.</figcaption></figure>
         </div>
       </div>
-      <div class="card"><img class="lg pf dm" src="assets/logos/themed/psy-forge-dark.png" width="139" height="36" alt="PSY Forge"><img class="lg pf lm" src="assets/logos/themed/psy-forge.png" width="139" height="36" alt="PSY Forge"><span class="mono">PSY Metal &amp; Alloy · 2026</span><h3>PSY Forge</h3><p>The ERP I built for an aluminium and zinc alloy maker in India, from buying scrap to selling ingots. It’s a private system for their team.</p></div>
-      <div class="card"><img class="lg dm" src="assets/logos/themed/amela-mark-dark.svg" width="26" height="26" alt=""><img class="lg lm" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>AmelaStockPOS</h3><p>Amela Pharmacy’s Windows till app. It keeps working when the internet drops, then syncs sales to AmelaStock without counting one twice.</p></div>
+      
+      <div class="card wide"><img class="lg dm" src="assets/logos/themed/amela-mark-dark.svg" width="26" height="26" alt=""><img class="lg lm" src="assets/logos/amela-mark.svg" width="26" height="26" alt=""><span class="mono">Amela Pharmacy · 2026</span><h3>AmelaStockPOS</h3><p>Amela Pharmacy’s Windows till app. It keeps working when the internet drops, then syncs sales to AmelaStock without counting one twice.</p></div>
     </div>
   </div>
 
